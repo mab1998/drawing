@@ -117,15 +117,16 @@
                       <br>
                       <div>
                           <div class="radio">
-                              <label><input type="radio" name="optradio" id="0 degree" checked>0 degree</label>
-                              <label><input type="radio" name="optradio" id="90 degree">90 degree</label>
+                              <label><input type="radio" name="optradio" id="0 degree" checked onclick="$('#rodio_stat').attr('value',0)">0 degree</label>
+                              <label><input type="radio" name="optradio" id="90 degree" onclick="$('#rodio_stat').attr('value',90)">90 degree</label>
                             </div>
                            
 
                           <button type="button" class="btn btn-success btn-lg" OnClick='document.forms["upload_file"].submit();'>Go to the next page</button>
-						  <form action="/third" id="upload_file"  enctype=multipart/form-data  method="POST" >
+					     	  <form action="/third" id="upload_file"  enctype=multipart/form-data  method="POST" >
                           
                             <input type="text" id="img_cro" name="name_text" placeholder="Lower case, all one word" value="mabrouk bennaoui">
+                            <input type="text" id="rodio_stat" name="rodio_stat" value="0">
                         </form>
 
                       </div>

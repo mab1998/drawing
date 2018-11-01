@@ -66,6 +66,8 @@ def upload_convert_pdf(app,request):
 def get_first_info(app,request,filename):
     if request.method == 'POST':
         logo_coordination = request.form['name_text']
+        degree=request.form['rodio_stat']
+        
         fn=logo_coordination
         out = logo_coordination
         o =json.loads(logo_coordination)
@@ -83,6 +85,11 @@ def get_first_info(app,request,filename):
         img = Image.open(os.path.join(app.config['UPLOAD_FOLDER'], "img300\\", filename))
 
         img2 = img.crop((o["x"] * 7, o["y"] * 7, o["x"] * 7 + o["width"] * 7, o["y"] * 7 + o["height"] * 7))
+        
+        print (degree)
+        if int(degree)==90:
+            img2=img2.rotate(90, expand=1)
+            
 
         img2.save(os.path.join(app.config['UPLOAD_FOLDER'], "croped_img\\", filename), "JPEG")
 
