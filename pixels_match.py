@@ -304,17 +304,15 @@ def get_data(rect0,name):
         return total_data
 
 
-def process_image(path,filename,alpha):
-
-		
+def process_image(path_source,pdffilename,path_destination,alpha=7):
 
 
-    file_name_img=path+filename
+    imgfilename=pdffilename.replace('pdf','jpg')
+    filename=converter_pdf(path_source,pdffilename,path_destination,imgfilename,300)
+    file_name_img=path_destination+filename
     img_rgb = cv2.imread(file_name_img)
 	
     image,rect,rect0,name0=found_rectlogo(img_rgb,name,alpha)
 #    image=found_rectlogo(img_rgb,name)
     json_data=get_data(rect0,name)
-    return json_data
-if __name__=="__main__":
-    process_image(path,filename,alpha)
+    return "kkkkkkkk"

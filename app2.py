@@ -3,7 +3,7 @@ from flask import Flask, request, redirect, url_for, send_from_directory
 from werkzeug.utils import secure_filename
 from os.path import join, dirname, realpath
 import time
-from proccess import home_page,upload_convert_pdf,get_first_info,crop,get
+from proccess import home_page,upload_convert_pdf,get_first_info,crop,get,check_file
 from flask import Flask, flash, request, redirect, url_for, render_template
 import logging
 logging.basicConfig(level=logging.DEBUG)
@@ -28,6 +28,11 @@ app.config['UPLOAD_FOLDER'] = UPLOADS_PATH
 
 
 filename=None
+@app.route('/check', methods=['GET', 'POST'])
+def check():
+    return check_file(app,request)
+
+
 @app.route('/')
 def first():
     return home_page()
@@ -51,6 +56,8 @@ def finish():
     json_info["coo_img"]=get()
     print(json_info["filename"])
     return crop(app,request,json_info)
+
+
 
 
 if __name__ == "__main__":

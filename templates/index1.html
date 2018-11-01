@@ -44,11 +44,19 @@
             <div class="btn btn-primary" onclick="document.getElementById('myFileInput').click()" >Uplode file</div>
 
 			
-            <div class="btn btn-primary" >Add template </div>
+            <div class="btn btn-primary" onclick="document.getElementById('myFileInput_check').click()">Add template </div>
+            
 			<form action="/second" method=POST enctype=multipart/form-data id="upload_file">
 				<input type="file" name="file" id="myFileInput" OnChange="document.getElementById('upload_file').submit();"  style="display: none;" />
 				
-			</form>
+            </form>
+            
+            <form action="/check" method=POST enctype=multipart/form-data id="check_file">
+				<input type="file" name="file" id="myFileInput_check" OnChange="document.getElementById('check_file').submit();"  style="display: none;" />
+				
+            </form>
+
+
         </div>
     <div class="footers">
 	<div class="container-fluid footer-container" id="dy-page-footer-container">

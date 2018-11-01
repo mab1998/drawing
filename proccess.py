@@ -13,6 +13,8 @@ import cv2
 import numpy as np
 import math
 import logging
+from pixels_match import process_image
+
 logging.basicConfig(level=logging.DEBUG)
 import numpy as np
 
@@ -36,6 +38,26 @@ def home_page():
     print("cd")
     return render_template('index1.html')
 
+def check_file(app,request):
+    if request.method == 'POST':
+#        if 'file' not in request.files:
+#            print ('no file')
+            
+        file = request.files['file']
+        if file and allowed_file(file.filename):
+            file_name = file.filename
+            path=os.path.join(app.config['UPLOAD_FOLDER'],"check/")
+            path_src=os.path.join(app.config['UPLOAD_FOLDER'],"check/", file_name)
+            path_dst=os.path.join(app.config['UPLOAD_FOLDER'],"check_convert/")
+            file.save(path_src)
+            
+            try:
+                return process_image(path,file_name,path_dst)
+            except:
+                return "kkkkkk"
+            
+        
+        
 
 def upload_convert_pdf(app,request):
     print(request)
