@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Header</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/Header-Nightsky.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+    <section class="header">
+    <div class="header-nightsky">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">HOME</a></li>
+                      
+                        <li><a href="#">SERVICE</a></li>
+
+                        <li><a href="#">ABOUT</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>Welcome to schema Cropper</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut tempor enim.</p>
+            <div class="btn btn-primary" onclick="document.getElementById('myFileInput').click()" >Uplode file</div>
+
+			
+            <div class="btn btn-primary" >Add template </div>
+			<form action="/second" method=POST enctype=multipart/form-data id="upload_file">
+				<input type="file" name="file" id="myFileInput" OnChange="document.getElementById('upload_file').submit();"  style="display: none;" />
+				
+			</form>
+        </div>
+    <div class="footers">
+	<div class="container-fluid footer-container" id="dy-page-footer-container">
+      <div class="container">
+          <div class="row text-center">
+              <div class="links footer-links col-xs-12 col-sm-12 padding-tb-10">
+
+              </div>
+              
+              <div class="footer-icon col-xs-12 col-sm-12 padding-tb-10">
+                  <div class="follow"><p><b>Follow us in :</b></p></div>
+                  <a href="#" target="_blank"><i class="fa fa-facebook-square fa-2x" style="color: #ecf0f1; margin-right: 10px;"></i></a>
+                  <a href="#" target="_blank"><i class="fa fa-google-plus-square fa-2x" style="color: #ecf0f1; margin-right: 10px;"></i></a>
+                  <a href="#" target="_blank"><i class="fa fa-twitter-square fa-2x" style="color: #ecf0f1;"></i></a>
+              </div>
+              <div class="footer-copyright col-xs-12 col-sm-12 padding-tb-10">
+                  <div>
+                  </div>
+                  <br>
+                  <p>Contct us at:
+                    <br>
+                    <b>Email</b>: example@ex.com
+                    <br>
+                    <b>Phone Number</b>: 00432384645
+                  </p>
+                  <br>
+                  <p>Copyright © 2018 schema cropper. All rights reserved.</p>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+ </div>
+	
+    </section>
+      <section class="footers" > 
+   
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

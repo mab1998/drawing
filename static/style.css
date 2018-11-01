@@ -1,0 +1,33 @@
+.cropper{
+
+    text-align: center
+}
+
+img {
+  max-width: 100%; /* This rule is very important, please do not ignore this! */
+}
+.image_container{
+    width:600px;
+    height: 500px;	
+}
+
+.square {
+
+    height: 500px;
+    width: 700px;
+    background-color: #555;
+  }
+  .square1 {
+    height: 200px;
+    width: 200px;
+    background-color: #555;
+    margin:left
+  }
+  .Primary{
+      margin-right:10px 
+  }
+  .jump{
+      background-color: #95a5a6
+  }
+ 
+

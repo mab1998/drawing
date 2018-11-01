@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link href="{{ url_for('static', filename='third_style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/cropper.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Crpper</title>
+  </head>
+  <body>
+
+    <!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand " href="#">
+     <h3 class="cropper">Determine Text</h3>
+    </a>
+  </nav>
+  <section>
+      <div class="container">
+          <div class="row">
+            <div class="col-8">
+            <div  class="square">
+		            <img  src="http://127.0.0.1:5000/static/img/{{msg}}" id="blah" height="700" width="600" alt="your image" >
+		
+            	</div>
+                
+                
+            </div>
+            <div class="col-4">
+                
+                <div class="img_brow"  style="height: 144px;">
+                  <img id="uploader-preview" height="200px" width="200px" src="#">
+                </div>
+                <br>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">X</span>
+                    </div>
+                    <input type="text" class="form-control" name="dataX" id="dataX" placeholder="x">
+                    <div class="input-group-append">
+                      <span class="input-group-text">px</span>
+                    </div>
+                  </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Y</span>
+                </div>
+                <input type="text" class="form-control" name="dataY" id="dataY" placeholder="y">
+                <div class="input-group-append">
+                  <span class="input-group-text">px</span>
+                </div>
+              </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Width</span>
+                </div>
+                <input type="text" class="form-control" name="dataWdth" id="dataWidth" placeholder="width">
+                <div class="input-group-append">
+                  <span class="input-group-text">px</span>
+                </div>
+              </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Height</span>
+              </div>
+              <input type="text" class="form-control" name="dataHeight" id="dataHeight" placeholder="height">
+              <div class="input-group-append">
+                <span class="input-group-text">px</span>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Rotate</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <div class="input-group-append">
+                  <span class="input-group-text">deg</span>
+                </div>
+              </div>
+              <div class="row operation">
+                     
+          
+                    <div class="col-0"><button type="button" class="btn btn-primary  " id="zoom_button"><i class="fa fa-search-plus" aria-hidden="true"></i>
+                    </button>
+                    </div>
+                    <div class="col-0"><button type="button" class="btn btn-primary "id="un_zoom_button"><i class="fa fa-search-minus" aria-hidden="true"></i>
+                    </button>
+                    </div>
+                    <div class="col-0"><button type="button" class="btn btn-primary " id="set_crop_mode"><i class="fa fa-crop" aria-hidden="true"></i>
+                    </button>
+                    </div>
+                    <div class="col-0"><button type="button" class="btn btn-primary " id="set_drag_mode"><i class="fa fa-arrows" aria-hidden="true"></i>
+                    </button>
+                    </div>
+                    
+                      <button type="button" id="Finish" class="btn btn-success" name='submit_image' >Finish | Upload Data</button>
+					  
+
+                  </div>
+                  </div>
+            
+            </div>
+           <br>
+            <div class="col">
+                <div class="row  ">
+                    <div class="btn-toolbar">
+                        <button type="button" id="titlez" class="btn btn-outline-success" >Project Title</button>
+                        <button type="button" id="desc" class="btn btn-outline-success" >Drawing Number</button>
+                        <button type="button" id="Prise" class="btn btn-outline-success" >Revision Ver</button>
+                        <input id="rest" class="btn btn-primary" type="reset" value="Reset">
+
+                   
+                  </div>
+                  </div>
+                  
+                  
+                      
+            </div>
+          </div>
+		      <form action="/finsh" method=post enctype=multipart/form-data id="upload_file">
+					<input type="text" name="title" id="title_id">
+					<input type="text" name="revision" id="revision_id">
+					<input type="text" name="price" id="price_id">
+					 
+				</form>
+        <!--  <canvas id="myCanvas" width="200" height="100"></canvas>-->
+
+                        
+                    
+
+
+
+  <script type="text/javascript" defer>
+
+    
+            
+            
+
+
+  
+    setTimeout(initCropper, 1000);
+
+
+
+		
+
+	    function initCropper(){
+	    //	console.log("Came here")
+	    	var image = document.getElementById('blah');
+			var cropper = new Cropper(image, {
+			  
+			  crop: function(e) {
+
+          document.getElementById("dataX").value = e.detail.x;
+		  		document.getElementById("dataY").value = e.detail.y;
+		  		document.getElementById("dataWidth").value = e.detail.width;
+			  	document.getElementById("dataHeight").value = e.detail.height;
+          
+			 //   console.log(e.detail.x);
+          
+     //     canvas=cropper.getCroppedCanvas().toDataURL();
+
+
+
+       //   var img0=cropper.getCroppedCanvas({width:200,height:200});
+          
+       var img=cropper.getCroppedCanvas({height:200}).toDataURL('image/jpeg')
+       $("#uploader-preview").attr("src", img);
+
+
+
+          
+    //      var c = document.getElementById("myCanvas");
+    //      var ctx = c.getContext("2d");
+     //     c.width=10
+   //       c.height=10
+
+   //       ctx.drawImage(img0, 10, 10);
+
+
+          var img=cropper.getCroppedCanvas({height:200}).toDataURL('image/jpeg')
+          
+          
+          
+			  	$("#uploader-preview").attr("src", img);
+          
+
+          
+          
+      //    document.getElementById('c').width = 200;
+          
+
+          
+          
+
+				
+				
+				
+	//		    console.log(e.detail.y);
+				
+			  }
+			});
+      var a=null
+      document.getElementById("titlez").addEventListener("click", function(){
+              //   console.log("Hello World");
+                  document.getElementById("titlez").className = "btn btn-success";
+               //   console.log(cropper.getData())
+                  if(a === null) {
+                      a=cropper.getData()
+					  document.getElementById("title_id").value=JSON.stringify(a)
+                  //    console.log(a)
+                    }
+                   else { 
+                    cropper.setData(a)
+                }
+
+        var desc=null
+      document.getElementById("desc").addEventListener("click", function(){
+              //   console.log("Hello World");
+                  document.getElementById("desc").className = "btn btn-success";
+               //   console.log(cropper.getData())
+                  if(desc === null) {
+                      desc=cropper.getData()
+					  document.getElementById("revision_id").value=JSON.stringify(desc)
+              //        console.log(desc)
+                    }
+                   else { 
+                    cropper.setData(desc)
+                }})
+                var Prise=null
+        document.getElementById("Prise").addEventListener("click", function(){
+              //   console.log("Hello World");
+                  document.getElementById("Prise").className = "btn btn-success";
+				  
+               //   console.log(cropper.getData())
+                  if(Prise === null) {
+                    Prise=cropper.getData()
+					document.getElementById("price_id").value=JSON.stringify(Prise)
+
+                 //     console.log(Prise)
+                    }
+                   else { 
+                    cropper.setData(Prise)
+                }})
+
+          
+            document.getElementById("rest").addEventListener("click", function(){
+            //    console.log("Hello World");
+            document.getElementById("titlez").className = "btn btn-outline-success"
+            document.getElementById("desc").className = "btn btn-outline-success"
+            document.getElementById("Prise").className = "btn btn-outline-success"
+            
+             Prise=null
+			 document.getElementById("price_id").value=""
+             desc=null
+			 document.getElementById("revision_id").value=""
+             a=null
+			 document.getElementById("title_id").value=""
+            
+
+            })
+            document.getElementById("Finish").addEventListener("click", function(){
+              document.forms["upload_file"].submit();
+            })
+
+
+        
+           //       cropper.setData(title);
+            //      document.getElementById("titlez").disabled = true;
+
+              })
+
+
+      document.getElementById('zoom_button').addEventListener('click', function(){
+			cropper.zoom(0.1)
+			})
+			document.getElementById('un_zoom_button').addEventListener('click', function(){
+			cropper.zoom(-0.1)
+			})
+			document.getElementById('set_drag_mode').addEventListener('click', function(){
+			cropper.setDragMode("move")
+			
+			})
+			document.getElementById('set_crop_mode').addEventListener('click', function(){
+			cropper.setDragMode("crop")
+			
+			})
+	    }
+
+	</script>
+  </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/cropper.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

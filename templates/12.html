@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/cropper.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Crpper</title>
+  </head>
+  <body>
+
+    <!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand " href="#">
+     <h3 class="cropper">Bootstrap</h3>
+    </a>
+  </nav>
+  <section>
+      <div class="container">
+          <div class="row">
+            <div class="col-8">
+            <div  class="square">
+		            <img id="blah" src="#"  alt="your image" >
+		
+            	</div>
+                
+                
+            </div>
+            <div class="col-4">
+                
+                
+                  <img id="uploader-preview" src="#" >
+                
+                <br>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">X</span>
+                    </div>
+                    <input type="text" class="form-control" name="dataX" id="dataX" placeholder="x">
+                    <div class="input-group-append">
+                      <span class="input-group-text">px</span>
+                    </div>
+                  </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Y</span>
+                </div>
+                <input type="text" class="form-control" name="dataY" id="dataY" placeholder="y">
+                <div class="input-group-append">
+                  <span class="input-group-text">px</span>
+                </div>
+              </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Width</span>
+                </div>
+                <input type="text" class="form-control" name="dataWdth" id="dataWidth" placeholder="width">
+                <div class="input-group-append">
+                  <span class="input-group-text">px</span>
+                </div>
+              </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Height</span>
+              </div>
+              <input type="text" class="form-control" name="dataHeight" id="dataHeight" placeholder="height">
+              <div class="input-group-append">
+                <span class="input-group-text">px</span>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Rotate</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <div class="input-group-append">
+                  <span class="input-group-text">deg</span>
+                </div>
+              </div>
+            
+            </div>
+            <br>
+            <div class="col">
+              <br>
+                <div class="row operation">
+                    <div class="col">
+                        <form action="/uplo" id="upload_file"  enctype=multipart/form-data  method="POST" >
+                            <input type="text" id="img_cro" name="name_text" placeholder="Lower case, all one word" value="mabrouk bennaoui">
+							
+                        </form>
+                    </div>
+                    <div class="col-0"><button type="button" class="btn btn-primary" id="zoom_button"><i class="fa fa-search-plus" aria-hidden="true"></i>
+                    </button>
+                    </div>
+                    <div class="col-0"><button type="button" class="btn btn-primary"id="un_zoom_button"><i class="fa fa-search-minus" aria-hidden="true"></i>
+                    </button>
+                    </div>
+                    <div class="col-0"><button type="button" class="btn btn-primary" id="set_crop_mode"><i class="fa fa-crop" aria-hidden="true"></i>
+                    </button>
+                    </div>
+                    <div class="col-0"><button type="button" class="btn btn-primary" id="set_drag_mode"><i class="fa fa-arrows" aria-hidden="true"></i>
+                    </button>
+                    </div>
+                    <div class="col-0"><button type="button" class="btn btn-btn-success" onclick="submitForm()"> <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                      Confirm and next</button>
+                    </div>
+                  </div>
+                  </div>
+                  
+                      
+            </div>
+          </div>
+        <!--  <canvas id="myCanvas" width="200" height="100"></canvas>-->
+
+                        
+                    
+
+
+
+  <script type="text/javascript" defer>
+  
+
+      function submitForm(){
+            document.forms["upload_file"].submit();
+//            document.forms[1].submit();
+        }
+
+ // $("input:coo_x").val("fffff");
+//		setTimeout(initCropper, 1000);
+var settings = {
+  max_width: 600,
+  max_height: 200
+}
+
+		function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result)
+                };
+                reader.readAsDataURL(input.files[0]);
+                setTimeout(initCropper, 1000);
+            }
+        };
+
+	    function initCropper(){
+	    	console.log("Came here")
+	    	var image = document.getElementById('blah');
+			var cropper = new Cropper(image, {
+			  
+			  crop: function(e) {
+
+				document.getElementById("dataX").value = e.detail.x;
+		  		document.getElementById("dataY").value = e.detail.y;
+		  		document.getElementById("dataWidth").value = e.detail.width;
+			  	document.getElementById("dataHeight").value = e.detail.height;
+
+//			  	document.getElementById("img_cro").value = cropper.getData();
+			  	$("#img_cro").val(JSON.stringify(cropper.getData()));
+          
+			    console.log(e.detail.x);
+
+     //     canvas=cropper.getCroppedCanvas().toDataURL();
+
+
+
+       //   var img0=cropper.getCroppedCanvas({width:200,height:200});
+          
+
+
+
+
+          
+    //      var c = document.getElementById("myCanvas");
+    //      var ctx = c.getContext("2d");
+     //     c.width=10
+   //       c.height=10
+
+   //       ctx.drawImage(img0, 10, 10);
+
+
+          var img=cropper.getCroppedCanvas({height:200}).toDataURL('image/jpeg')
+
+
+                  $("#uploader-preview").attr("src", img);
+
+          
+          
+      //    document.getElementById('c').width = 200;
+          
+
+          
+          
+
+				
+				
+				
+			    console.log(e.detail.y);
+				
+			  }
+			});
+      document.getElementById('zoom_button').addEventListener('click', function(){
+			cropper.zoom(0.1)
+			})
+			document.getElementById('un_zoom_button').addEventListener('click', function(){
+			cropper.zoom(-0.1)
+			})
+			document.getElementById('set_drag_mode').addEventListener('click', function(){
+			cropper.setDragMode("move")
+			
+			})
+			document.getElementById('set_crop_mode').addEventListener('click', function(){
+			cropper.setDragMode("crop")
+			
+			})
+	    }
+
+	</script>
+  </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/cropper.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
