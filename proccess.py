@@ -38,6 +38,22 @@ def home_page():
     print("cd")
     return render_template('index1.html')
 
+def html(content):  # Also allows you to set your own <head></head> etc
+   return '<html><head><style> img {     border: 1px solid #ddd; /* Gray border */     border-radius: 4px;  /* Rounded border */     padding: 5px; /* Some padding */    width: 300px; /* Set a small width */ }/* Add a hover effect (blue shadow) */img:hover {    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);}</style></head><body>' + content + '</body></html>'
+
+
+def display(app):
+    import os
+    aa=os.listdir("C://Users//benna//OneDrive//Bureau//Drawapp//static//img//croped_img")
+    
+    body=""
+    img_tag='<img src="'
+    for name in aa:
+        name=os.path.join("static/img/","croped_img/", name)
+        tag=img_tag+name+'" alt="Girl in a jacket">'
+        body+=tag
+    return html(body)
+
 def check_file(app,request):
     if request.method == 'POST':
 #        if 'file' not in request.files:

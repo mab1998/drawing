@@ -3,7 +3,7 @@ from flask import Flask, request, redirect, url_for, send_from_directory
 from werkzeug.utils import secure_filename
 from os.path import join, dirname, realpath
 import time
-from proccess import home_page,upload_convert_pdf,get_first_info,crop,get,check_file
+from proccess import home_page,upload_convert_pdf,get_first_info,crop,get,check_file,display
 from flask import Flask, flash, request, redirect, url_for, render_template
 import logging
 logging.basicConfig(level=logging.DEBUG)
@@ -32,6 +32,9 @@ filename=None
 def check():
     return check_file(app,request)
 
+@app.route('/display')
+def display_img():
+    return display(app)
 
 @app.route('/')
 def first():
