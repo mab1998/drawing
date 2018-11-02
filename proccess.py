@@ -117,11 +117,15 @@ def get_first_info(app,request,filename):
     #    img = cv2.imread(os.path.join(app.config['UPLOAD_FOLDER'], "img300\\", filename),o)
    #     print(o,file=sys.stdout)
     #    sub_image(os.path.join(app.config['UPLOAD_FOLDER'], "img300\\", filename),o,os.path.join(app.config['UPLOAD_FOLDER'], "croped_img\\", filename))
-
-
+        
+        img_1 = Image.open(os.path.join(app.config['UPLOAD_FOLDER'], "img200\\", filename))
+        
+        img2 = img_1.crop((o["x"] , o["y"] , o["x"]  + o["width"] , o["y"] + o["height"] ))
+        
+        img2.save(os.path.join(app.config['UPLOAD_FOLDER'], "croped_img_200\\", filename), "JPEG")
 
         img = Image.open(os.path.join(app.config['UPLOAD_FOLDER'], "img300\\", filename))
-
+        
         img2 = img.crop((o["x"] * 7, o["y"] * 7, o["x"] * 7 + o["width"] * 7, o["y"] * 7 + o["height"] * 7))
         
         print (degree)
@@ -130,6 +134,7 @@ def get_first_info(app,request,filename):
             
 
         img2.save(os.path.join(app.config['UPLOAD_FOLDER'], "croped_img\\", filename), "JPEG")
+        
 
 
         return render_template('crop_sec.html',msg=str(filename))
