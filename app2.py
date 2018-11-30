@@ -17,7 +17,7 @@ json_info={
     "project_number":""
 }
 
-UPLOADS_PATH = join(dirname(realpath(__file__)), 'static\\img\\')
+UPLOADS_PATH = join(dirname(realpath(__file__)), 'static/img/')
 
 
 UPLOAD_FOLDER = '/tmp/flask-upload-test/'

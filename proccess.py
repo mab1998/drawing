@@ -13,7 +13,7 @@ import cv2
 import numpy as np
 import math
 import logging
-from pixels_match import process_image
+from pixels_match import  found_rectlogo,get_data
 
 logging.basicConfig(level=logging.DEBUG)
 import numpy as np
@@ -44,7 +44,8 @@ def html(content):  # Also allows you to set your own <head></head> etc
 
 def display(app):
     import os
-    aa=os.listdir("C://Users//benna//OneDrive//Bureau//Drawapp//static//img//croped_img")
+    path=os.path.join(app.config['UPLOAD_FOLDER'],"static//img//croped_img/")
+    aa=os.listdir(path)
     
     body=""
     img_tag='<img src="'
@@ -63,14 +64,31 @@ def check_file(app,request):
         if file and allowed_file(file.filename):
             file_name = file.filename
             path=os.path.join(app.config['UPLOAD_FOLDER'],"check/")
+            print(path, file=sys.stdout)
             path_src=os.path.join(app.config['UPLOAD_FOLDER'],"check/", file_name)
-            path_dst=os.path.join(app.config['UPLOAD_FOLDER'],"check_convert/")
+            path_dst=os.path.join(app.config['UPLOAD_FOLDER'],"check_convert_300/")
             file.save(path_src)
-            
-            try:
-                return process_image(path,file_name,path_dst)
-            except:
-                return "kkkkkk"
+
+
+            file_300=os.path.join(app.config['UPLOAD_FOLDER'],"check_convert_300/")
+            file_200=os.path.join(app.config['UPLOAD_FOLDER'],"check_convert_200/")
+            filename=file_name.replace(".pdf",".jpg")
+
+            converter_pdf(app.config['UPLOAD_FOLDER'],file_name,file_300,filename,300)
+
+            resizer_img(file_300, filename, file_200, filename, 7)
+            file_name_img=file_200+filename
+            img_rgb = cv2.imread(file_name_img)
+            alpha=7
+            rect0, name0 = found_rectlogo(app.config['UPLOAD_FOLDER'],img_rgb, filename, alpha)
+            msg= get_data(app.config['UPLOAD_FOLDER'],rect0, name0)
+            # try:
+            # msg=process_image(app.config['UPLOAD_FOLDER'],file_name,path_dst)
+            return render_template('json_tmp.html', users=msg)
+            # except Exception as e:
+            #     print('error out put format ',e,file=sys.stdout)
+            #     msg = process_image(path, file_name, path_dst)
+            #     return  msg
             
         
         
@@ -118,13 +136,15 @@ def get_first_info(app,request,filename):
    #     print(o,file=sys.stdout)
     #    sub_image(os.path.join(app.config['UPLOAD_FOLDER'], "img300\\", filename),o,os.path.join(app.config['UPLOAD_FOLDER'], "croped_img\\", filename))
         
-        img_1 = Image.open(os.path.join(app.config['UPLOAD_FOLDER'], "img200\\", filename))
+        img_1 = Image.open(os.path.join(app.config['UPLOAD_FOLDER'], "img200/", filename))
         
         img2 = img_1.crop((o["x"] , o["y"] , o["x"]  + o["width"] , o["y"] + o["height"] ))
+        if int(degree)==90:
+            img2=img2.rotate(90, expand=1)
         
-        img2.save(os.path.join(app.config['UPLOAD_FOLDER'], "croped_img_200\\", filename), "JPEG")
+        img2.save(os.path.join(app.config['UPLOAD_FOLDER'], "croped_img_200/", filename), "JPEG")
 
-        img = Image.open(os.path.join(app.config['UPLOAD_FOLDER'], "img300\\", filename))
+        img = Image.open(os.path.join(app.config['UPLOAD_FOLDER'], "img300/", filename))
         
         img2 = img.crop((o["x"] * 7, o["y"] * 7, o["x"] * 7 + o["width"] * 7, o["y"] * 7 + o["height"] * 7))
         
@@ -133,7 +153,7 @@ def get_first_info(app,request,filename):
             img2=img2.rotate(90, expand=1)
             
 
-        img2.save(os.path.join(app.config['UPLOAD_FOLDER'], "croped_img\\", filename), "JPEG")
+        img2.save(os.path.join(app.config['UPLOAD_FOLDER'], "croped_img/", filename), "JPEG")
         
 
 
@@ -156,17 +176,17 @@ def get_first_info(app,request,filename):
        #     img=rescale(img,o["scalex"],o["scaley"])
        #     cv2.imwrite(os.path.join(app.config['UPLOAD_FOLDER'],"images200\\", filename),img)
 
-            img = Image.open(os.path.join(app.config['UPLOAD_FOLDER'],"images200\\", filename))
+            img = Image.open(os.path.join(app.config['UPLOAD_FOLDER'],"images200/", filename))
 
 
             img2 = img.crop((o["x"]*5, o["y"]*5, o["x"]*5+o["width"]*5, o["y"]*5+o["height"]*5))
          #   img2.show()
 
-            img2.save(os.path.join(app.config['UPLOAD_FOLDER'],"rlogo\\"+ json_info['filename']), "JPEG")
+            img2.save(os.path.join(app.config['UPLOAD_FOLDER'],"rlogo/"+ json_info['filename']), "JPEG")
           #  img2.save("C:/test"+ ".thumbnail", "JPEG")
 
 
-            return render_template('secend_page.html',msg=str("rlogo\\"+json_info['filename']))
+            return render_template('secend_page.html',msg=str("rlogo/"+json_info['filename']))
 
  #   return '''
  #   <!doctype html>
@@ -187,7 +207,7 @@ def crop(app,request,json_info):
         proj_num=request.form['project_number']
         json_info['project_number'] = price
 
-        with open('{}/{}.json'.format(app.config['UPLOAD_FOLDER'],"rlogo\\"+json_info['filename'].split(".")[0]), 'w') as outfile:
+        with open('{}/{}.json'.format(app.config['UPLOAD_FOLDER'],"rlogo/"+json_info['filename'].split(".")[0]), 'w') as outfile:
             json.dump(json_info, outfile)
 
 
