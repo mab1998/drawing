@@ -44,7 +44,7 @@ def html(content):  # Also allows you to set your own <head></head> etc
 
 def display(app):
     import os
-    path=os.path.join(app.config['UPLOAD_FOLDER'],"static//img//croped_img/")
+    path=os.path.join(app.config['UPLOAD_FOLDER'],"croped_img/")
     aa=os.listdir(path)
     
     body=""
