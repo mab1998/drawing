@@ -2,16 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1da2452d-95db-4bf4-9369-ea8c89dcc08e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/00.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/4481-02B-D-S04-Section-Details---Gridline-B-C.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/LRW-7459-L(70)16-Directional-Signage-Plan-Sixth-Floor-C.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/LRW-7459-L(70)17-Directional-Signage-Plan-Seventh-Floor-C.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/check_convert_200/00.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/check_convert_300/00.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/croped_img/00.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/croped_img_200/00.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/croped_img_200/1409-004-Key-Elevation-Bank-.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/croped_img_200/15-033(23.1)008G.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/croped_img_200/4481-02B-D-S04-Section-Details---Gridline-B-C.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/croped_img_200/ASF21828_3030-CW(1).02-06-A.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/croped_img_200/LRW-7459-L(70)10-Directional-Signage-Plan-Ground-Floor-C.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/croped_img_200/LRW-7459-L(70)16-Directional-Signage-Plan-Sixth-Floor-C.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/croped_img_200/LRW-7459-L(70)17-Directional-Signage-Plan-Seventh-Floor-C.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/img200/00.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/img300/00.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/rlogo/00.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/rlogo/1006-LVL-08-WETWORKS-C1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/rlogo/1409-004-Key-Elevation-Bank-.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/rlogo/15-033(23.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/rlogo/4481-02B-D-S04-Section-Details---Gridline-B-C.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/rlogo/ASF21828_3030-CW(1).json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/rlogo/LRW-7459-L(70)10-Directional-Signage-Plan-Ground-Floor-C.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/rlogo/LRW-7459-L(70)17-Directional-Signage-Plan-Seventh-Floor-C.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/rlogo/NL-ISS-XX-01-DR-S-12.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/croped_img_200/1409-001-Key-Elevation--Acadamy-Way-P1.jpg" afterPath="$PROJECT_DIR$/static/img/croped_img_200/1409-001-Key-Elevation--Acadamy-Way-P1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/croped_img_200/1409-4200-LRW-comments-P1.jpg" afterPath="$PROJECT_DIR$/static/img/croped_img_200/1409-4200-LRW-comments-P1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/croped_img_200/16774-12.jpg" afterPath="$PROJECT_DIR$/static/img/croped_img_200/16774-12.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/croped_img_200/2-C2.jpg" afterPath="$PROJECT_DIR$/static/img/croped_img_200/2-C2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/croped_img_200/4481-01C-D-E01-Elevation-B.jpg" afterPath="$PROJECT_DIR$/static/img/croped_img_200/4481-01C-D-E01-Elevation-B.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/croped_img_200/503_Door schedule_C5.jpg" afterPath="$PROJECT_DIR$/static/img/croped_img_200/503_Door schedule_C5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/croped_img_200/ASF21828_3010-Screen-Ref-Elevation---CW07-Elevations,-Plans-Sections-&amp;-Details-C.jpg" afterPath="$PROJECT_DIR$/static/img/croped_img_200/ASF21828_3010-Screen-Ref-Elevation---CW07-Elevations,-Plans-Sections-&amp;-Details-C.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/croped_img_200/C60298-50-M001-Mechanical-Public-Health-Services-AFC1.jpg" afterPath="$PROJECT_DIR$/static/img/croped_img_200/C60298-50-M001-Mechanical-Public-Health-Services-AFC1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/croped_img_200/NL-ISS-XX-01-DR-S-12.04_PROPOSED FIRST FLOOR PLAN (3).jpg" afterPath="$PROJECT_DIR$/static/img/croped_img_200/NL-ISS-XX-01-DR-S-12.04_PROPOSED FIRST FLOOR PLAN (3).jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/img200/2-C2.jpg" afterPath="$PROJECT_DIR$/static/img/img200/2-C2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/img300/2-C2.jpg" afterPath="$PROJECT_DIR$/static/img/img300/2-C2.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app2.py" afterPath="$PROJECT_DIR$/app2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pixels_match.py" afterPath="$PROJECT_DIR$/pixels_match.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proccess.py" afterPath="$PROJECT_DIR$/proccess.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/crop_first_img.html" afterPath="$PROJECT_DIR$/templates/crop_first_img.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/crop_sec.html" afterPath="$PROJECT_DIR$/templates/crop_sec.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index1.html" afterPath="$PROJECT_DIR$/templates/index1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/secend_page.html" afterPath="$PROJECT_DIR$/templates/secend_page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/rlogo/1409-001-Key-Elevation--Acadamy-Way-P1.json" afterPath="$PROJECT_DIR$/static/img/rlogo/1409-001-Key-Elevation--Acadamy-Way-P1.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/rlogo/1409-4200-LRW-comments-P1.json" afterPath="$PROJECT_DIR$/static/img/rlogo/1409-4200-LRW-comments-P1.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/rlogo/16774-12.json" afterPath="$PROJECT_DIR$/static/img/rlogo/16774-12.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/rlogo/2-C2.json" afterPath="$PROJECT_DIR$/static/img/rlogo/2-C2.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/rlogo/4481-01C-D-E01-Elevation-B.json" afterPath="$PROJECT_DIR$/static/img/rlogo/4481-01C-D-E01-Elevation-B.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/rlogo/503_Door schedule_C5.json" afterPath="$PROJECT_DIR$/static/img/rlogo/503_Door schedule_C5.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/rlogo/ASF21828_3010-Screen-Ref-Elevation---CW07-Elevations,-Plans-Sections-&amp;-Details-C.json" afterPath="$PROJECT_DIR$/static/img/rlogo/ASF21828_3010-Screen-Ref-Elevation---CW07-Elevations,-Plans-Sections-&amp;-Details-C.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/rlogo/C60298-50-M001-Mechanical-Public-Health-Services-AFC1.json" afterPath="$PROJECT_DIR$/static/img/rlogo/C60298-50-M001-Mechanical-Public-Health-Services-AFC1.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/json_tmp.html" afterPath="$PROJECT_DIR$/templates/json_tmp.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,17 +63,38 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/httpdocs$httpdocs.coverage" NAME="httpdocs Coverage Results" MODIFIED="1542660443561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Drawapp$httpdocs.coverage" NAME="httpdocs Coverage Results" MODIFIED="1542733424546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/drawing$httpdocs.coverage" NAME="httpdocs Coverage Results" MODIFIED="1544199108577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="proccess.py" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="proccess.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proccess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="88" column="40" lean-forward="true" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
+            <state relative-caret-position="377">
+              <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pixels_match.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pixels_match.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="130" column="51" lean-forward="false" selection-start-line="130" selection-start-column="50" selection-end-line="130" selection-end-column="51" />
+              <folding>
+                <element signature="e#515#1522#0" expanded="false" />
+                <element signature="e#1553#1635#0" expanded="false" />
+                <element signature="e#1734#2165#0" expanded="false" />
+                <element signature="e#2249#2540#0" expanded="false" />
+                <element signature="e#6137#6336#0" expanded="false" />
+                <element signature="e#6359#6615#0" expanded="false" />
+                <element signature="e#6636#8186#0" expanded="false" />
+                <element signature="e#8233#11143#0" expanded="false" />
+                <element signature="e#11211#12531#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -42,27 +103,11 @@
       <file leaf-file-name="app2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="72">
+              <caret line="31" column="12" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="31" selection-end-column="12" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pixels_match.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pixels_match.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="365" column="24" lean-forward="true" selection-start-line="365" selection-start-column="24" selection-end-line="365" selection-end-column="24" />
-              <folding>
-                <element signature="e#515#1522#0" expanded="false" />
-                <element signature="e#1553#1635#0" expanded="false" />
-                <element signature="e#1734#2165#0" expanded="false" />
-                <element signature="e#7849#8048#0" expanded="false" />
-                <element signature="e#8071#8327#0" expanded="false" />
-                <element signature="e#8348#9898#0" expanded="false" />
+                <element signature="e#418#532#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -83,6 +128,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/templates/json_tmp.html" />
         <option value="$PROJECT_DIR$/pixels_match.py" />
         <option value="$PROJECT_DIR$/proccess.py" />
       </list>
@@ -95,10 +141,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="y" value="3" />
-    <option name="width" value="1378" />
-    <option name="height" value="732" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -115,22 +161,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Drawapp" />
+              <option name="myItemId" value="drawing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Drawapp" />
+              <option name="myItemId" value="drawing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -337,18 +383,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="3" width="1378" height="732" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26100153" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2685325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3747954" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -368,16 +414,97 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/proccess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="81" column="18" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#418#532#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pixels_match.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="88" column="12" lean-forward="false" selection-start-line="88" selection-start-column="12" selection-end-line="149" selection-end-column="0" />
+          <folding>
+            <element signature="e#515#1522#0" expanded="false" />
+            <element signature="e#1553#1635#0" expanded="false" />
+            <element signature="e#1734#2165#0" expanded="false" />
+            <element signature="e#2249#2540#0" expanded="false" />
+            <element signature="e#6137#6336#0" expanded="false" />
+            <element signature="e#6359#6615#0" expanded="false" />
+            <element signature="e#6636#8186#0" expanded="false" />
+            <element signature="e#8233#11143#0" expanded="false" />
+            <element signature="e#11211#12531#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proccess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="88" column="36" lean-forward="true" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#418#532#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pixels_match.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4318">
+          <caret line="365" column="24" lean-forward="true" selection-start-line="365" selection-start-column="24" selection-end-line="365" selection-end-column="24" />
+          <folding>
+            <element signature="e#515#1522#0" expanded="false" />
+            <element signature="e#1553#1635#0" expanded="false" />
+            <element signature="e#1734#2165#0" expanded="false" />
+            <element signature="e#2249#2540#0" expanded="false" />
+            <element signature="e#6137#6336#0" expanded="false" />
+            <element signature="e#6359#6615#0" expanded="false" />
+            <element signature="e#6636#8186#0" expanded="false" />
+            <element signature="e#8233#11143#0" expanded="false" />
+            <element signature="e#11211#12531#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="24" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#418#532#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -400,9 +527,12 @@
             <element signature="e#515#1522#0" expanded="false" />
             <element signature="e#1553#1635#0" expanded="false" />
             <element signature="e#1734#2165#0" expanded="false" />
-            <element signature="e#7849#8048#0" expanded="false" />
-            <element signature="e#8071#8327#0" expanded="false" />
-            <element signature="e#8348#9898#0" expanded="false" />
+            <element signature="e#2249#2540#0" expanded="false" />
+            <element signature="e#6137#6336#0" expanded="false" />
+            <element signature="e#6359#6615#0" expanded="false" />
+            <element signature="e#6636#8186#0" expanded="false" />
+            <element signature="e#8233#11143#0" expanded="false" />
+            <element signature="e#11211#12531#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -413,6 +543,7 @@
           <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="21" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#418#532#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -425,9 +556,12 @@
             <element signature="e#515#1522#0" expanded="false" />
             <element signature="e#1553#1635#0" expanded="false" />
             <element signature="e#1734#2165#0" expanded="false" />
-            <element signature="e#7849#8048#0" expanded="false" />
-            <element signature="e#8071#8327#0" expanded="false" />
-            <element signature="e#8348#9898#0" expanded="false" />
+            <element signature="e#2249#2540#0" expanded="false" />
+            <element signature="e#6137#6336#0" expanded="false" />
+            <element signature="e#6359#6615#0" expanded="false" />
+            <element signature="e#6636#8186#0" expanded="false" />
+            <element signature="e#8233#11143#0" expanded="false" />
+            <element signature="e#11211#12531#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -442,37 +576,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proccess.py">
+    <entry file="file://$PROJECT_DIR$/templates/json_tmp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="88" column="40" lean-forward="true" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
+        <state relative-caret-position="205">
+          <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pixels_match.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="130" column="51" lean-forward="false" selection-start-line="130" selection-start-column="50" selection-end-line="130" selection-end-column="51" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#515#1522#0" expanded="false" />
+            <element signature="e#1553#1635#0" expanded="false" />
+            <element signature="e#1734#2165#0" expanded="false" />
+            <element signature="e#2249#2540#0" expanded="false" />
+            <element signature="e#6137#6336#0" expanded="false" />
+            <element signature="e#6359#6615#0" expanded="false" />
+            <element signature="e#6636#8186#0" expanded="false" />
+            <element signature="e#8233#11143#0" expanded="false" />
+            <element signature="e#11211#12531#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="72">
+          <caret line="31" column="12" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="31" selection-end-column="12" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#418#532#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pixels_match.py">
+    <entry file="file://$PROJECT_DIR$/proccess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="365" column="24" lean-forward="true" selection-start-line="365" selection-start-column="24" selection-end-line="365" selection-end-column="24" />
+        <state relative-caret-position="377">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
-            <element signature="e#515#1522#0" expanded="false" />
-            <element signature="e#1553#1635#0" expanded="false" />
-            <element signature="e#1734#2165#0" expanded="false" />
-            <element signature="e#7849#8048#0" expanded="false" />
-            <element signature="e#8071#8327#0" expanded="false" />
-            <element signature="e#8348#9898#0" expanded="false" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

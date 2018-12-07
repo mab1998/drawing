@@ -83,126 +83,78 @@ def converter_pdf(path_source,pdffilename,path_destination,imgfilename,dpi):
     return image_name
 
 def found_rectlogo(path_main,image,file_name,alpha):
-#    path="./logo-origin/"
-#    path="./static/img/croped_img/"
-#     path="./static/img/croped_img_200/"
     path=os.path.join(path_main,"croped_img_200/")
-    #cv2.imshow("Template", template)
     count=0
-    # loop over the images to find the template in
-    found = None
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-#    rec_number=0
     listdir=os.listdir(path)
     print(listdir)
-#    bar = Bar('Processing', max=len(listdir))
+    found = None
     for name in listdir:
-    	template_path=path+name
-#    	print(template_path)    
+        template_path=path+name
+#    	print(template_path)
 #    	template_source = cv2.imread(template_path)
-    	im1=Image.open(template_path)
-    	im2=im1.rotate(90, expand=1)
+        im1=Image.open(template_path)
+        im2=im1.rotate(-90, expand=1)
 
 #    	template_source = cv2.imread(template_path)
-    	template = np.array(im1) 
-    	template90= np.array(im2) 
-    	template_gray = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
-#    	template_source = Image.open(template_path)
-#    	print(template.shape,'---',template_path)        
-#    	template = cv2.cvtColor(template_gray, cv2.COLOR_BGR2GRAY)
-    	template = cv2.Canny(template_gray, 50, 200)
-#    	imgplot = plt.imshow(template)
+        template = np.array(im1)
+        template90= np.array(im2)
+        template_gray = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
+        template = cv2.Canny(template_gray, 50, 200)
+        (tH, tW) = template.shape[:2]
 
-    	(tH, tW) = template.shape[:2]
-        
-    	(h, w) = (tH, tW)
-    	center = (w / 2, h / 2)
- 
-#    	center = (w / 2, h / 2)
-    	angle90 =270
-    	scale = 1.0                
-    	template_gray90 = cv2.cvtColor(template90, cv2.COLOR_BGR2GRAY)
+        (h, w) = (tH, tW)
+        center = (w / 2, h / 2)
+        angle90 =270
+        scale = 1.0
+        template_gray90 = cv2.cvtColor(template90, cv2.COLOR_BGR2GRAY)
 
-#    	M = cv2.getRotationMatrix2D(center, angle90, scale)
-#    	template90 = cv2.warpAffine(template_gray, M, (h, w))   
-#    	img2=img2.rotate(90, expand=1)
-    	(tH90, tW90) = template90.shape[:2]          
+        (tH90, tW90) = template90.shape[:2]
+        template90 = cv2.Canny(template_gray90, 50, 200)
+        # cv2.imshow('images', template90)
 
-    	template90 = cv2.Canny(template_gray90, 50, 200)
-#    	imgplot = plt.imshow(template90)
-        
-        
-        
-    	for scale in np.linspace(0.2, 1.0,20)[::-1]:
-    		print('scale  ',scale)
-    		# resize the image according to the scale, and keep track
-    		# of the ratio of the resizing.
-    		resized = imutils.resize(gray, width = int(gray.shape[1] * scale))
+        for scale in np.linspace(0.2, 1.0,20)[::-1]:
+            print('scale  ',scale)
+            resized = imutils.resize(gray, width = int(gray.shape[1] * scale))
+            r = gray.shape[1] / float(resized.shape[1])
+            edged = cv2.Canny(resized, 50, 200)
+            if resized.shape[0] < tH or resized.shape[1] < tW:
+                pass
+            else:
+                rotate=0
+                result = cv2.matchTemplate(edged, template, cv2.TM_CCOEFF)
+                (_, maxVal, _, maxLoc) = cv2.minMaxLoc(result)
 
-    		r = gray.shape[1] / float(resized.shape[1])
-#    		bar1.next()
-     
-    		# if the resized image is smaller than the template, then break
-    		# from the loop
-    		if resized.shape[0] < tH or resized.shape[1] < tW:
-    			pass
-    		else:
-    			rotate=0           
-        
+                print('maxval ===', maxVal)
+                if found is None or maxVal > found[0]:
+                                found = (maxVal, maxLoc, r,tH, tW,name,rotate)
+                                # print('maxval=', maxVal)
+                                # print('name=', name)
+            if resized.shape[0] < tH90 or resized.shape[1] < tW90:
+                continue
+            result = cv2.matchTemplate(edged, template90, cv2.TM_CCOEFF)
+            (_, maxVal90, _, maxLoc90) = cv2.minMaxLoc(result)
 
-        		# detect edges in the resized, grayscale image and apply template
-        		# matching to find the template in the image
-    			edged = cv2.Canny(resized, 50, 200)
-    			result = cv2.matchTemplate(edged, template, cv2.TM_CCOEFF)
-    			(_, maxVal, _, maxLoc) = cv2.minMaxLoc(result)
- 
-    			if found is None or maxVal > found[0]:
-    			    			found = (maxVal, maxLoc, r,tH, tW,name,rotate)
-                
-################################################################################
-#
-################################################################################
-              
-#    		for scale in np.linspace(0.2, 1.0,20)[::-1]:
-                
-            		# resize the image according to the scale, and keep track
-            		# of the ratio of the resizing
-         
-#    		resized = imutils.resize(gray, width = int(gray.shape[1] * scale))
-#    		r = gray.shape[1] / float(resized.shape[1])
-#    		bar1.next()
-     
-    		# if the resized image is smaller than the template, then break
-    		# from the loop
-    		if resized.shape[0] < tH90 or resized.shape[1] < tW90:
-    			continue
-    		# detect edges in the resized, grayscale image and apply template
-    		# matching to find the template in the image
-#    		edged = cv2.Canny(resized, 50, 200)
-    		result = cv2.matchTemplate(edged, template90, cv2.TM_CCOEFF)
-    		(_, maxVal90, _, maxLoc90) = cv2.minMaxLoc(result)
-#    		print(maxVal)            
-     
-    		if maxVal > found[0]:
-    			rotate=1                  
-    			found = (maxVal90, maxLoc90, r,tH90, tW90,name,rotate)
-#    			print(maxVal)       
+
+            print('maxval 90==', maxVal90)
+            if maxVal90 > found[0]:
+                rotate=1
+                found = (maxVal90, maxLoc90, r,tH90, tW90,name,rotate)
+                # print('maxval 90=', maxVal90)
+                # print('name 90=', name)
+
 #################################################################################
 #
 ################################################################################    
-#    	if found is None or maxVal > found[0]:
-#    			found = (maxVal, maxLoc, r,tH, tW,name,rotate) 
-    	# unpack the bookkeeping varaible and compute the (x, y) coordinates
-    	# of the bounding box based on the resized ratio
+
     (_, maxLoc, r,tH, tW,name,rotate) = found
     (startX, startY) = (int(maxLoc[0] * r), int(maxLoc[1] * r))
     (endX, endY) = (int((maxLoc[0] + tW) * r), int((maxLoc[1] + tH) * r))
     print('max==',maxVal) 
-    	# draw a bounding box around the detected result and display the image
+        # draw a bounding box around the detected result and display the image
     rect=image[startY:endY,startX:endX]
-#    imgplot = plt.imshow(rect)
 #    cv2.imwrite('./rect0/{}'.format(name),rect)
-
+#     cv2.imshow('images',rect0)
     cv2.rectangle(image, (startX, startY), (endX, endY), (0, 0, 255), 2)
     rect=image[startY:endY,startX:endX]
     path0=os.path.join(path_main,"check_convert_300/")
@@ -320,24 +272,34 @@ def get_data(path_main,image,name0):
         x_start,y_start,x_end,y_end,rotate=get_rect(title)        
         img_title=cv2.rectangle(image, (int(x_start*scale_w), int(y_start*scale_h)), (int(x_end*scale_w), int(y_end*scale_h)), (0, 255, 0), 7)
         img_title=image[int(y_start*scale_h):int(y_end*scale_h),int(x_start*scale_w):int(x_end*scale_w)]
+        cv2.imwrite(path_main+'/title.jpg',img_title)
 #        imgplot = plt.imshow(img_title)
 #        plt.show()
         title_text=ocr(img_title)
+        print('title_text=',title_text)
 
         drawingN=data['project_number']
         x_start,y_start,x_end,y_end,rotate=get_rect(drawingN)
 #        img_drawingN=cv2.rectangle(img_rgb, (x_start*scale_w, y_start*scale_h), (x_end*scale_w, y_end*scale_h), (0, 0, 255), 2)
         img_drawingN=image[int(y_start*scale_h):int(y_end*scale_h),int(x_start*scale_w):int(x_end*scale_w)]
+        cv2.imwrite(path_main+'/drawing_number.jpg',img_drawingN)
+
+
         drawingN_text=ocr(img_drawingN)
-        
+        print('img_drawingN=',drawingN_text)
+
 
         
         revsion=data['revsion']
         x_start,y_start,x_end,y_end,rotate=get_rect(revsion)        
 #        img_revsion=cv2.rectangle(img_rgb, (x_start*scale_w, y_start*scale_h), (x_end*scale_w, y_end*scale_h), (0, 0, 255), 2)
-        img_revsion=image[int(y_start*scale_h):int(y_end*scale_h),int(x_start*scale_w):int(x_end*scale_w)] 
+        img_revsion=image[int(y_start*scale_h):int(y_end*scale_h),int(x_start*scale_w):int(x_end*scale_w)]
+        cv2.imwrite(path_main+'/revision.jpg',img_revsion)
+
+
         revsion_text=ocr(img_revsion)
-        
+        print('img_revsion=',revsion_text)
+
         profile_ocr['text'][0]['Title']=title_text
         profile_ocr['text'][0]['drawingN']=drawingN_text
         profile_ocr['text'][0]['revsion']=revsion_text

@@ -81,10 +81,20 @@ def check_file(app,request):
             img_rgb = cv2.imread(file_name_img)
             alpha=7
             rect0, name0 = found_rectlogo(app.config['UPLOAD_FOLDER'],img_rgb, filename, alpha)
+            cv2.imwrite(os.path.join(app.config['UPLOAD_FOLDER'],"0000.jpg"), rect0)
             msg= get_data(app.config['UPLOAD_FOLDER'],rect0, name0)
+
+            import json
+
+            msg = json.loads(msg)
+
+            title=msg['text'][0]["Title"]
+            drawing=msg['text'][0]["drawingN"]
+            revsion = msg['text'][0]["revsion"]
+
             # try:
             # msg=process_image(app.config['UPLOAD_FOLDER'],file_name,path_dst)
-            return render_template('json_tmp.html', users=msg)
+            return render_template('json_tmp.html', title=title,drawingN=drawing,revsion=revsion)
             # except Exception as e:
             #     print('error out put format ',e,file=sys.stdout)
             #     msg = process_image(path, file_name, path_dst)
@@ -207,7 +217,7 @@ def crop(app,request,json_info):
         proj_num=request.form['project_number']
         json_info['project_number'] = price
 
-        with open('{}/{}.json'.format(app.config['UPLOAD_FOLDER'],"rlogo/"+json_info['filename'].split(".")[0]), 'w') as outfile:
+        with open('{}/{}'.format(app.config['UPLOAD_FOLDER'],"rlogo/"+json_info['filename'].replace("jpg","json")[0]), 'w') as outfile:
             json.dump(json_info, outfile)
 
 
